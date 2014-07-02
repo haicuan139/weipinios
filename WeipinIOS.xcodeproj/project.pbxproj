@@ -38,6 +38,14 @@
 		22100F831959E4B1009742E1 /* ZhiWeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F711959E3F6009742E1 /* ZhiWeiViewController.m */; };
 		22100F841959E4B1009742E1 /* MJTabBarViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 22100F561959C743009742E1 /* MJTabBarViewController.h */; };
 		22100F851959E4B1009742E1 /* MJTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F571959C743009742E1 /* MJTabBarViewController.m */; };
+		221696261962D25200CE7AB6 /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221696251962D25200CE7AB6 /* more.storyboard */; };
+		221696291962D4B100CE7AB6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221696281962D4B100CE7AB6 /* MoreViewController.m */; };
+		2216962D1962ED1000CE7AB6 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2216962C1962ED1000CE7AB6 /* about.storyboard */; };
+		2216962F1962EE9700CE7AB6 /* feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2216962E1962EE9700CE7AB6 /* feedback.storyboard */; };
+		221696321962F0F300CE7AB6 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221696311962F0F300CE7AB6 /* AboutViewController.m */; };
+		221696351962F0FE00CE7AB6 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221696341962F0FE00CE7AB6 /* FeedBackViewController.m */; };
+		221696371962FB0600CE7AB6 /* detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221696361962FB0600CE7AB6 /* detail.storyboard */; };
+		2216963A1962FCE700CE7AB6 /* OralDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221696391962FCE700CE7AB6 /* OralDetailViewController.m */; };
 		2240B36A195D8456009DD78C /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240B369195D8456009DD78C /* MyInfoViewController.m */; };
 		2246CFA6195C15EC000202D8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA5195C15EC000202D8 /* BaseViewController.m */; };
 		2246CFA9195C39DF000202D8 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA8195C39DF000202D8 /* RegViewController.m */; };
@@ -102,6 +110,18 @@
 		22100F6F1959E3F6009742E1 /* MianShiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MianShiViewController.m; sourceTree = "<group>"; };
 		22100F701959E3F6009742E1 /* ZhiWeiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiWeiViewController.h; sourceTree = "<group>"; };
 		22100F711959E3F6009742E1 /* ZhiWeiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiWeiViewController.m; sourceTree = "<group>"; };
+		221696251962D25200CE7AB6 /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
+		221696271962D4B100CE7AB6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		221696281962D4B100CE7AB6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		2216962C1962ED1000CE7AB6 /* about.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = about.storyboard; sourceTree = "<group>"; };
+		2216962E1962EE9700CE7AB6 /* feedback.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = feedback.storyboard; sourceTree = "<group>"; };
+		221696301962F0F300CE7AB6 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		221696311962F0F300CE7AB6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		221696331962F0FE00CE7AB6 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
+		221696341962F0FE00CE7AB6 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
+		221696361962FB0600CE7AB6 /* detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = detail.storyboard; sourceTree = "<group>"; };
+		221696381962FCE700CE7AB6 /* OralDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OralDetailViewController.h; sourceTree = "<group>"; };
+		221696391962FCE700CE7AB6 /* OralDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OralDetailViewController.m; sourceTree = "<group>"; };
 		2240B368195D8456009DD78C /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
 		2240B369195D8456009DD78C /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
 		2246CFA4195C15EC000202D8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -246,6 +266,14 @@
 				2246CFA8195C39DF000202D8 /* RegViewController.m */,
 				2240B368195D8456009DD78C /* MyInfoViewController.h */,
 				2240B369195D8456009DD78C /* MyInfoViewController.m */,
+				221696271962D4B100CE7AB6 /* MoreViewController.h */,
+				221696281962D4B100CE7AB6 /* MoreViewController.m */,
+				221696301962F0F300CE7AB6 /* AboutViewController.h */,
+				221696311962F0F300CE7AB6 /* AboutViewController.m */,
+				221696331962F0FE00CE7AB6 /* FeedBackViewController.h */,
+				221696341962F0FE00CE7AB6 /* FeedBackViewController.m */,
+				221696381962FCE700CE7AB6 /* OralDetailViewController.h */,
+				221696391962FCE700CE7AB6 /* OralDetailViewController.m */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -280,6 +308,10 @@
 				22100F2C1959C577009742E1 /* Main.storyboard */,
 				2246CFAA195C3A17000202D8 /* reg.storyboard */,
 				22AB802C196040FA0048B683 /* myinfos.storyboard */,
+				221696251962D25200CE7AB6 /* more.storyboard */,
+				2216962C1962ED1000CE7AB6 /* about.storyboard */,
+				2216962E1962EE9700CE7AB6 /* feedback.storyboard */,
+				221696361962FB0600CE7AB6 /* detail.storyboard */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -377,11 +409,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221696371962FB0600CE7AB6 /* detail.storyboard in Resources */,
 				22100F361959C577009742E1 /* Images.xcassets in Resources */,
+				221696261962D25200CE7AB6 /* more.storyboard in Resources */,
 				22100F251959C576009742E1 /* InfoPlist.strings in Resources */,
 				22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */,
 				22100F2E1959C577009742E1 /* Main.storyboard in Resources */,
+				2216962D1962ED1000CE7AB6 /* about.storyboard in Resources */,
 				2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */,
+				2216962F1962EE9700CE7AB6 /* feedback.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,16 +443,20 @@
 				22100F761959E4B1009742E1 /* MianShiNavigationController.h in Sources */,
 				22100F771959E4B1009742E1 /* MianShiNavigationController.m in Sources */,
 				22100F781959E4B1009742E1 /* LuYongNavigationController.h in Sources */,
+				221696351962F0FE00CE7AB6 /* FeedBackViewController.m in Sources */,
+				221696291962D4B100CE7AB6 /* MoreViewController.m in Sources */,
 				22100F791959E4B1009742E1 /* LuYongNavigationController.m in Sources */,
 				22100F7A1959E4B1009742E1 /* HaoYouNavigationController.h in Sources */,
 				22100F7B1959E4B1009742E1 /* HaoYouNavigationController.m in Sources */,
 				22100F7C1959E4B1009742E1 /* HaoYouViewController.h in Sources */,
 				2246CFA9195C39DF000202D8 /* RegViewController.m in Sources */,
+				2216963A1962FCE700CE7AB6 /* OralDetailViewController.m in Sources */,
 				22100F7D1959E4B1009742E1 /* HaoYouViewController.m in Sources */,
 				22100F7E1959E4B1009742E1 /* LuYongViewController.h in Sources */,
 				22100F7F1959E4B1009742E1 /* LuYongViewController.m in Sources */,
 				22100F801959E4B1009742E1 /* MianShiViewController.h in Sources */,
 				22100F811959E4B1009742E1 /* MianShiViewController.m in Sources */,
+				221696321962F0F300CE7AB6 /* AboutViewController.m in Sources */,
 				22100F821959E4B1009742E1 /* ZhiWeiViewController.h in Sources */,
 				22100F831959E4B1009742E1 /* ZhiWeiViewController.m in Sources */,
 				22100F841959E4B1009742E1 /* MJTabBarViewController.h in Sources */,

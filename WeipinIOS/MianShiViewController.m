@@ -35,6 +35,6 @@
 }
 -(void)onItemClick:(NSInteger)index
 {
-    [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
+    [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
 }
 @end

@@ -27,5 +27,5 @@
 -(void)pushViewControllerWithStorboardName:(NSString *)storyboardName sid:(NSString *)id;
 //-(void) setKids: (NSString *)myOldestKidName secondKid: (NSString *) mySecondOldestKidName thirdKid: (NSString *) myThirdOldestKidName;
 -(void)pushViewControllerWithController:(UIViewController *)controller;
-
+-(void)onRightBarItemClick;
 @end

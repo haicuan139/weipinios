@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
     return self;
 }
@@ -35,7 +36,8 @@
     [array retain];
     self.title = @"职位";
     //初始化TabView
-    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     tableView = [[UITableView alloc ] init];
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     tableView.delegate = self;
@@ -45,6 +47,8 @@
         view.delegate = self;
         refreshTableHeaderView = view;
         [tableView addSubview:view];
+
+
         [view release];
     }
     
@@ -118,6 +122,7 @@
 
 
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -151,4 +156,9 @@
 {
     [self.navigationController pushViewController:controller animated:YES];
 }
+-(void)onRightBarItemClick
+{
+    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
+}
+
 @end

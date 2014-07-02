@@ -34,7 +34,7 @@
 }
 -(void)onItemClick:(NSInteger)index
 {
-    [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
+    [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
 
 }
 @end
