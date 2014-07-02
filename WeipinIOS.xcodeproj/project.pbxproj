@@ -53,6 +53,7 @@
 		22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AB802C196040FA0048B683 /* myinfos.storyboard */; };
 		22B38EB3195AE6DD00AF0F63 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F691959E15E009742E1 /* EGORefreshTableHeaderView.m */; };
 		22B38EB4195AE6E700AF0F63 /* EGORefreshTableHeaderView.h in Sources */ = {isa = PBXBuildFile; fileRef = 22100F681959E15E009742E1 /* EGORefreshTableHeaderView.h */; };
+		22BA1D70196424640024D192 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 22BA1D6F196424640024D192 /* more_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,9 @@
 		22B38EBC195AEAF200AF0F63 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		22B38EBD195AEAF200AF0F63 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		22B38EBE195AEAF200AF0F63 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		22BA1D6F196424640024D192 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
+		22BA1D7119642C320024D192 /* URLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLHeader.h; sourceTree = "<group>"; };
+		22BA1D7219642E0E0024D192 /* ConfigKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigKey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 				22100F291959C577009742E1 /* MJAppDelegate.h */,
 				22100F2A1959C577009742E1 /* MJAppDelegate.m */,
 				22100F351959C577009742E1 /* Images.xcassets */,
+				22BA1D6F196424640024D192 /* more_icon.png */,
 				22100F211959C576009742E1 /* Supporting Files */,
 			);
 			path = WeipinIOS;
@@ -274,6 +279,8 @@
 				221696341962F0FE00CE7AB6 /* FeedBackViewController.m */,
 				221696381962FCE700CE7AB6 /* OralDetailViewController.h */,
 				221696391962FCE700CE7AB6 /* OralDetailViewController.m */,
+				22BA1D7119642C320024D192 /* URLHeader.h */,
+				22BA1D7219642E0E0024D192 /* ConfigKey.h */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -414,6 +421,7 @@
 				221696261962D25200CE7AB6 /* more.storyboard in Resources */,
 				22100F251959C576009742E1 /* InfoPlist.strings in Resources */,
 				22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */,
+				22BA1D70196424640024D192 /* more_icon.png in Resources */,
 				22100F2E1959C577009742E1 /* Main.storyboard in Resources */,
 				2216962D1962ED1000CE7AB6 /* about.storyboard in Resources */,
 				2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */,

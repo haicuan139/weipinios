@@ -28,14 +28,25 @@
 {
     return _reloading;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     array = [self initArray];
     [array retain];
-    self.title = @"职位";
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    BOOL noIsFirst = [ud boolForKey:FIRST_RUN_KEY];
+    if (!noIsFirst) {
+        //开启验证
+        [ud setBool:YES forKey:FIRST_RUN_KEY];
+        [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
+    }
     //初始化TabView
+//
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"more_icon" ofType:@"png"];
+//    UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
     self.navigationItem.rightBarButtonItem = rightItem;
     tableView = [[UITableView alloc ] init];

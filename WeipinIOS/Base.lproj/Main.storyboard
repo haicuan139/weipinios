@@ -30,7 +30,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="vJC-ED-iro" customClass="MianShiNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="面试" image="second" id="Uih-Pu-Yb2"/>
+                    <tabBarItem key="tabBarItem" title="面试" image="mianshi" id="Uih-Pu-Yb2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="doP-ys-PSW">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -67,7 +67,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="YvT-lO-D2q" customClass="HaoYouNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="好友" image="second" id="v4n-j7-lD7"/>
+                    <tabBarItem key="tabBarItem" title="好友" image="haoyou" id="v4n-j7-lD7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydq-0U-jPI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -104,7 +104,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="Igk-Zc-OU8" customClass="ZhiweiNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="职位" image="first" id="71N-D9-LZi"/>
+                    <tabBarItem key="tabBarItem" title="职位" image="zhiwei" id="71N-D9-LZi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qod-KW-u97">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -141,7 +141,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="QD2-R9-bsg" customClass="LuYongNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="录用" image="first" id="Js3-qO-ndO"/>
+                    <tabBarItem key="tabBarItem" title="录用" image="luyong" id="Js3-qO-ndO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb1-EH-Q9s">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -175,8 +175,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="haoyou" width="30" height="30"/>
+        <image name="luyong" width="30" height="30"/>
+        <image name="mianshi" width="30" height="30"/>
+        <image name="zhiwei" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
