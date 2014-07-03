@@ -51,25 +51,7 @@
 }
 - (IBAction)toudiButtonClick:(id)sender {
 
-    
-    ASIHTTPRequest *request = [self getHttpRequest:@"http://www.baidu.com"];
-    
-    [request startAsynchronous];
-}
--(void)requestFinished:(ASIHTTPRequest *)request{
-    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
-    NSString *responseString = [request responseString];
-    NSLog(@"%@",responseString);
 
 }
 
--(void)requestStarted:(ASIHTTPRequest *)request
-{
-    [[UIApplication sharedApplication ] setNetworkActivityIndicatorVisible:YES];
-}
--(void)requestFailed:(ASIHTTPRequest *)request
-{
-    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
-    [self showMessageDialog:@"提示" message:@"网络连接错误"];
-}
 @end

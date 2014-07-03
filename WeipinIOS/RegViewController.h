@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBaseViewController.h"
+@interface RegViewController : PBaseViewController
+{
+    int timerCount;
+    NSTimer *timer;
+    NSString* code;
 
-@interface RegViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UIView *sendCodeButton;
+}
+@property (retain, nonatomic) IBOutlet UIButton *sendCodeButton;
 @property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (retain, nonatomic) IBOutlet UITextField *checkCodeTextField;
 @property (retain, nonatomic) IBOutlet UIButton *nextButton;
-
+- (IBAction)sendCodeOnClick:(id)sender;
+- (IBAction)nextOnClick:(id)sender;
+- (void)goCheck:(NSInteger) phoneNumber;
 @end

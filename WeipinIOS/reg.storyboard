@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="acZ-Gu-akf">
     <dependencies>
-        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
+        <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -41,10 +41,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-IR-008">
                                 <rect key="frame" x="209" y="203" width="91" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.78224779211956519" blue="6.415567228958812e-05" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
                                 <state key="normal" title="发送验证码">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendCodeOnClick:" destination="acZ-Gu-akf" eventType="touchUpInside" id="Zfl-P5-Jr0"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-ZI-2I4">
                                 <rect key="frame" x="20" y="250" width="280" height="44"/>
@@ -71,6 +74,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextOnClick:" destination="acZ-Gu-akf" eventType="touchUpInside" id="TMg-Kn-Nff"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,7 +85,7 @@
                         <outlet property="checkCodeTextField" destination="4ar-Rj-eTk" id="61n-Re-OKI"/>
                         <outlet property="nextButton" destination="WW3-tf-Jhi" id="rIZ-bF-1T2"/>
                         <outlet property="phoneNumberTextField" destination="Vdm-tx-Jmq" id="JuK-J9-NXG"/>
-                        <outlet property="sendCodeButton" destination="DJx-8g-cvA" id="mdH-Gv-nYI"/>
+                        <outlet property="sendCodeButton" destination="dbj-IR-008" id="aTZ-aD-TcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1y7-Bz-Eih" userLabel="First Responder" sceneMemberID="firstResponder"/>

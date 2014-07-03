@@ -52,6 +52,67 @@
     [_phoneNumberTextField release];
     [_checkCodeTextField release];
     [_nextButton release];
+    [timer invalidate];
+    [timer release];
+    [code release];
     [super dealloc];
 }
+- (IBAction)sendCodeOnClick:(id)sender {
+    //获取手机号码
+    NSString* number = _phoneNumberTextField.text;
+    if (number.length != 11) {
+        [self showMessageDialog:@"提示" message:@"请输入正确的手机号码!"];
+    }else{
+        //发送验证码
+        ASIFormDataRequest *request = [self getPostHttpRequest:[WURL_BASE_URL stringByAppendingString:WURL_SEND_TEL_MESSAGE]];
+        [request setPostValue:number forKey:@"telephoNum"];
+        [request startAsynchronous];
+        timerCount = 30;
+        [timer retain];
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerSelector) userInfo:nil repeats:YES];
+        [timer fire];
+    }
+}
+
+- (void)timerSelector{
+    timerCount = timerCount - 1;
+    [_sendCodeButton setEnabled:NO];
+    if (timerCount == 0) {
+        [timer invalidate];
+        timerCount = 30;
+        [_sendCodeButton setTitle:@"发送验证码" forState:UIControlStateNormal];
+        [_sendCodeButton setEnabled:YES];
+    }else{
+        NSString *text = [[NSString alloc]initWithFormat:@"%d",timerCount];
+
+        [_sendCodeButton setTitle:text forState:UIControlStateDisabled];
+    }
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    [super requestFinished:request];
+    NSString *responseString = [request responseString];
+    NSData* data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    code = [dic objectForKey:@"validateCode"];
+    [code retain];
+    NSLog(@"code:%@",code);
+
+}
+- (IBAction)nextOnClick:(id)sender {
+    NSString* tCode = _checkCodeTextField.text;
+    if (tCode.length != 4) {
+        [self showMessageDialog:@"提示" message:@"验证码有误"];
+    }else{
+        if ([code isEqualToString:tCode]) {
+            //验证成功
+
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [self showMessageDialog:@"提示" message:@"验证码有误"];
+        }
+    }
+}
+
 @end

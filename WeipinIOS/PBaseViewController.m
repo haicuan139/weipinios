@@ -24,11 +24,31 @@
     [alert show];
     
 }
--(ASIHTTPRequest *)getHttpRequest : (NSString *)url
+-(ASIHTTPRequest *)getNormalHttpRequest : (NSString *)url
 {
     NSURL *myurl = [NSURL URLWithString:url];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:myurl];
+
     request.delegate = self;
     return request;
+}
+-(ASIFormDataRequest *) getPostHttpRequest : (NSString *)url{
+    NSURL *myurl = [NSURL URLWithString:url];
+    ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:myurl];
+    request.delegate = self;
+    return request;
+}
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
+}
+
+-(void)requestStarted:(ASIHTTPRequest *)request
+{
+    [[UIApplication sharedApplication ] setNetworkActivityIndicatorVisible:YES];
+}
+-(void)requestFailed:(ASIHTTPRequest *)request
+{
+    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
+    [self showMessageDialog:@"提示" message:@"网络连接错误"];
 }
 @end

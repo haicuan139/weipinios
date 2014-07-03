@@ -169,7 +169,8 @@
 }
 -(void)onRightBarItemClick
 {
-    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
+//    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
+            [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
 }
 
 @end

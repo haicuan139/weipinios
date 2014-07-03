@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "URLHeader.h"
+#import "ConfigKey.h"
 @interface PBaseViewController : UIViewController <ASIHTTPRequestDelegate>
 -(void)showMessageDialog:(NSString *)title message:(NSString* )msg;
--(ASIHTTPRequest *) getHttpRequest :(NSString *) url;
+-(ASIHTTPRequest *) getNormalHttpRequest :(NSString *) url;
+-(ASIFormDataRequest *) getPostHttpRequest : (NSString *)url;
+
 @end
