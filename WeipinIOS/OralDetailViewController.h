@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface OralDetailViewController : UIViewController
+#import "ASIHTTPRequest.h"
+@interface OralDetailViewController : UIViewController <ASIHTTPRequestDelegate>
+@property (retain, nonatomic) IBOutlet UIButton *toudiButton;
+- (IBAction)toudiButtonClick:(id)sender;
 
 @end

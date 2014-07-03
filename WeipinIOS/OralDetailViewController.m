@@ -7,7 +7,7 @@
 //
 
 #import "OralDetailViewController.h"
-
+#import "ASIHTTPRequest.h"
 @interface OralDetailViewController ()
 
 @end
@@ -45,5 +45,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)dealloc {
+    [_toudiButton release];
+    [super dealloc];
+}
+- (IBAction)toudiButtonClick:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request setDelegate:self];
+    
+    [request startAsynchronous];
+}
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    NSString *responseString = [request responseString];
+    NSLog(@"%@",responseString);
+}
 
 @end
