@@ -7,7 +7,6 @@
 //
 
 #import "OralDetailViewController.h"
-#import "ASIHTTPRequest.h"
 @interface OralDetailViewController ()
 
 @end
@@ -51,17 +50,26 @@
     [super dealloc];
 }
 - (IBAction)toudiButtonClick:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+
     
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    
-    [request setDelegate:self];
+    ASIHTTPRequest *request = [self getHttpRequest:@"http://www.baidu.com"];
     
     [request startAsynchronous];
 }
 -(void)requestFinished:(ASIHTTPRequest *)request{
+    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
     NSString *responseString = [request responseString];
     NSLog(@"%@",responseString);
+
 }
 
+-(void)requestStarted:(ASIHTTPRequest *)request
+{
+    [[UIApplication sharedApplication ] setNetworkActivityIndicatorVisible:YES];
+}
+-(void)requestFailed:(ASIHTTPRequest *)request
+{
+    [[UIApplication sharedApplication ] setStatusBarHidden:YES];
+    [self showMessageDialog:@"提示" message:@"网络连接错误"];
+}
 @end

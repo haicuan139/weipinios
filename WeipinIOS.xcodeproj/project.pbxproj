@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220F1DC91965557400737197 /* PBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220F1DC81965557400737197 /* PBaseViewController.m */; };
 		22100F1B1959C576009742E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1A1959C576009742E1 /* Foundation.framework */; };
 		22100F1D1959C576009742E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1C1959C576009742E1 /* CoreGraphics.framework */; };
 		22100F1F1959C576009742E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1E1959C576009742E1 /* UIKit.framework */; };
@@ -100,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220F1DC71965557400737197 /* PBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBaseViewController.h; sourceTree = "<group>"; };
+		220F1DC81965557400737197 /* PBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBaseViewController.m; sourceTree = "<group>"; };
 		22100F171959C576009742E1 /* WeipinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeipinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22100F1A1959C576009742E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22100F1C1959C576009742E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -341,6 +344,8 @@
 				221696391962FCE700CE7AB6 /* OralDetailViewController.m */,
 				22BA1D7119642C320024D192 /* URLHeader.h */,
 				22BA1D7219642E0E0024D192 /* ConfigKey.h */,
+				220F1DC71965557400737197 /* PBaseViewController.h */,
+				220F1DC81965557400737197 /* PBaseViewController.m */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 			files = (
 				22BA1D9C196430980024D192 /* Reachability.h in Sources */,
 				22BA1D9D196430980024D192 /* ASIAuthenticationDialog.h in Sources */,
+				220F1DC91965557400737197 /* PBaseViewController.m in Sources */,
 				22BA1D9E196430980024D192 /* ASICacheDelegate.h in Sources */,
 				22BA1D9F196430980024D192 /* ASIDataCompressor.h in Sources */,
 				22BA1DA0196430980024D192 /* ASIDataDecompressor.h in Sources */,
