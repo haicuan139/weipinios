@@ -27,6 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"职位";
+    
 }
 -(NSArray *)initArray
 {

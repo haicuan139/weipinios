@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-    
+
     }
     return self;
 }
@@ -75,9 +75,6 @@
         [ud setObject:_myinfos.workType forKey:WPOST_PARAMS_WORK_TYPE];
         [ud setObject:_myinfos.currentState forKey:WPOST_PARAMS_USER_STATE];
         [ud setBool:YES forKey:WKEY_SAVE_USERINFO];
-        //查看保存的信息
-        MyInfosBean *b = [self getUserInfo];
-        NSLog(@"%@",b.description);
     }
 }
 -(void)requestFailed:(ASIHTTPRequest *)request{
@@ -112,6 +109,11 @@
     NSString *phone = [def objectForKey:WKEY_PHONE_NUMBER];
     NSString* ps = @"手机号码:";
     _phoneNameLable.text = [ps stringByAppendingString:phone];
+    //初始化个人资料
+    MyInfosBean *userInfo = [self getUserInfo];
+    if (![self isEmpty:userInfo.name]) {
+        //TODO:个人资料初始化
+    }
 }
 
 - (void)didReceiveMemoryWarning
