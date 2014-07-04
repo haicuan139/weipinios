@@ -36,18 +36,23 @@
     array = [self initArray];
     [array retain];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    BOOL noIsFirst = [ud boolForKey:FIRST_RUN_KEY];
-    if (!noIsFirst) {
+    BOOL noIsFirst = [ud boolForKey:WKEY_FIRST_RUN_KEY];
+    BOOL isCheck = [ud boolForKey:WKEY_CHECK_STATE_BOOL];
+    BOOL isSaveUserInfo = [ud boolForKey:WKEY_SAVE_USERINFO];
+    if (!noIsFirst || !isCheck) {
         //开启验证
-        [ud setBool:YES forKey:FIRST_RUN_KEY];
+        [ud setBool:YES forKey:WKEY_FIRST_RUN_KEY];
         [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
+    }else if(!isSaveUserInfo){
+            
+        [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
     }
     //初始化TabView
 //
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"more_icon" ofType:@"png"];
-//    UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"more_icon" ofType:@"png"];
+    UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
     self.navigationItem.rightBarButtonItem = rightItem;
     tableView = [[UITableView alloc ] init];
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -169,8 +174,8 @@
 }
 -(void)onRightBarItemClick
 {
-//    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
-            [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
+    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
+//            [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
 }
 
 @end

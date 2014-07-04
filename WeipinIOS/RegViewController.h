@@ -21,5 +21,4 @@
 @property (retain, nonatomic) IBOutlet UIButton *nextButton;
 - (IBAction)sendCodeOnClick:(id)sender;
 - (IBAction)nextOnClick:(id)sender;
-- (void)goCheck:(NSInteger) phoneNumber;
 @end

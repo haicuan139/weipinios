@@ -47,4 +47,30 @@
  */
 #define WURL_URL_USER_SCORE @"userscore/findbyuserid.ac"
 
+/**
+ * POST参数：电话号码
+ */
+
+#define WPOST_PARAMS_TEL @"userTel"
+
+/**
+ * POST参数：userName
+ */
+//"userName",
+//"userIdentitycard", "userSalary", "userWork", "userStatus"
+#define WPOST_PARAMS_USERNAME @"userName"
+#define WPOST_PARAMS_IDCARD @"userIdentitycard"
+#define WPOST_PARAMS_SALARY @"userSalary"
+#define WPOST_PARAMS_WORK_TYPE @"userWork"
+#define WPOST_PARAMS_USER_STATE @"userStatus"
+#define WPOST_REQUEST_CODE @"code"
+#define WCONFIGKEY_USERID @"userId"
+
+
+
+
+
+
+
+
 

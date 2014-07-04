@@ -18,9 +18,9 @@
     }
     return self;
 }
--(void)showMessageDialog:(NSString *)title message:(NSString *)msg
+-(void)showMessageDialog:(NSString *)msg
 {
-    UIAlertView *alert = [[UIAlertView alloc ] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil ];
+    UIAlertView *alert = [[UIAlertView alloc ] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil ];
     [alert show];
     
 }
@@ -49,6 +49,44 @@
 -(void)requestFailed:(ASIHTTPRequest *)request
 {
     [[UIApplication sharedApplication ] setStatusBarHidden:YES];
-    [self showMessageDialog:@"提示" message:@"网络连接错误"];
+    [self showMessageDialog:@"网络连接错误"];
+    NSError *error = [request error];
+    NSLog(@"code:%li -- des:%@",(long)error.code , error.description);
+}
+-(void)pushViewControllerWithStorboardName:(NSString *)storyboardName sid:(NSString *)id
+{
+    UIStoryboard* st = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    UIViewController *controller = [st instantiateViewControllerWithIdentifier:id];
+    [self pushViewControllerWithController:controller];
+    
+}
+-(void)pushViewControllerWithController:(UIViewController *)controller
+{
+    [self.navigationController pushViewController:controller animated:YES];
+}
+-(NSString *)getPhoneNumber{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return  [ud objectForKey:WKEY_PHONE_NUMBER];
+}
+-(NSDictionary *)getDicByNSString:(NSString *) string{
+    NSData* data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    return dic;
+}
+-(BOOL)isEmpty:(NSString *)string{
+    if (string == nil || string.length == 0) {
+        return YES;
+    }
+    return NO;
+}
+-(MyInfosBean *)getUserInfo{
+    MyInfosBean * infos = [MyInfosBean alloc];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    infos.userId = [ud objectForKey :WCONFIGKEY_USERID];
+    infos.idCard = [ud objectForKey :WPOST_PARAMS_IDCARD];
+    infos.salary = [ud objectForKey :WPOST_PARAMS_SALARY];
+    infos.workType = [ud objectForKey :WPOST_PARAMS_WORK_TYPE];
+    infos.currentState = [ud objectForKey :WPOST_PARAMS_USER_STATE];
+    return infos;
 }
 @end

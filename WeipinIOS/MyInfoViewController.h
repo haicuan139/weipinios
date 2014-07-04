@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MyInfoViewController : UIViewController <UITextFieldDelegate>
+#import "PBaseViewController.h"
+#import "MyInfosBean.h"
+@interface MyInfoViewController : PBaseViewController <UITextFieldDelegate>
 
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
-
+@property (retain, nonatomic) MyInfosBean* myinfos;
 @property (retain, nonatomic) IBOutlet UITextField *idCardTextField;
 @property (retain, nonatomic) IBOutlet UITextField *salaryTextField;
 @property (retain, nonatomic) IBOutlet UITextField *typeWorkTextField;
@@ -21,6 +22,8 @@
 @property (retain, nonatomic) IBOutlet UILabel *userIdLable;
 @property (retain, nonatomic) IBOutlet UILabel *oralCountLable;
 @property (retain, nonatomic) IBOutlet UIButton *doneButton;
+- (void)commitMyInfos:(MyInfosBean *) myinfos;
+- (IBAction)doneButtonOnClick:(id)sender;
 
 
 -(void)hideKeyboard;

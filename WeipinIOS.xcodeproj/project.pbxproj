@@ -51,6 +51,7 @@
 		2246CFA6195C15EC000202D8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA5195C15EC000202D8 /* BaseViewController.m */; };
 		2246CFA9195C39DF000202D8 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA8195C39DF000202D8 /* RegViewController.m */; };
 		2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2246CFAA195C3A17000202D8 /* reg.storyboard */; };
+		229F080E19669361002C7EE5 /* MyInfosBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F080D19669361002C7EE5 /* MyInfosBean.m */; };
 		22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AB802C196040FA0048B683 /* myinfos.storyboard */; };
 		22B38EB3195AE6DD00AF0F63 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F691959E15E009742E1 /* EGORefreshTableHeaderView.m */; };
 		22B38EB4195AE6E700AF0F63 /* EGORefreshTableHeaderView.h in Sources */ = {isa = PBXBuildFile; fileRef = 22100F681959E15E009742E1 /* EGORefreshTableHeaderView.h */; };
@@ -159,6 +160,8 @@
 		2246CFA7195C39DF000202D8 /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
 		2246CFA8195C39DF000202D8 /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		2246CFAA195C3A17000202D8 /* reg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = reg.storyboard; sourceTree = "<group>"; };
+		229F080C19669361002C7EE5 /* MyInfosBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfosBean.h; sourceTree = "<group>"; };
+		229F080D19669361002C7EE5 /* MyInfosBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfosBean.m; sourceTree = "<group>"; };
 		22AB802C196040FA0048B683 /* myinfos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = myinfos.storyboard; sourceTree = "<group>"; };
 		22B38EB7195AEAF200AF0F63 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
 		22B38EB8195AEAF200AF0F63 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				22BA1D7119642C320024D192 /* URLHeader.h */,
 				22100F701959E3F6009742E1 /* ZhiWeiViewController.h */,
 				22100F711959E3F6009742E1 /* ZhiWeiViewController.m */,
+				229F080C19669361002C7EE5 /* MyInfosBean.h */,
+				229F080D19669361002C7EE5 /* MyInfosBean.m */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				22BA1DA5196430980024D192 /* ASIHTTPRequestDelegate.h in Sources */,
 				22BA1DA6196430980024D192 /* ASIInputStream.h in Sources */,
 				22BA1DA7196430980024D192 /* ASINetworkQueue.h in Sources */,
+				229F080E19669361002C7EE5 /* MyInfosBean.m in Sources */,
 				22BA1DA8196430980024D192 /* ASIProgressDelegate.h in Sources */,
 				22B38EB4195AE6E700AF0F63 /* EGORefreshTableHeaderView.h in Sources */,
 				22B38EB3195AE6DD00AF0F63 /* EGORefreshTableHeaderView.m in Sources */,

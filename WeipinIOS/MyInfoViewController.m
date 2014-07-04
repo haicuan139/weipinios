@@ -24,6 +24,65 @@
     return self;
 }
 
+- (IBAction)doneButtonOnClick:(id)sender {
+    //提交个人资料
+    NSString* name = self.nameTextField.text;
+    NSString* idCard = self.idCardTextField.text;
+    NSString* salary = self.salaryTextField.text;
+    NSString* workType = self.typeWorkTextField.text;
+    NSString* currentState = self.currentStateTextField.text;
+    _myinfos = [MyInfosBean alloc];
+    _myinfos.name = name;
+    _myinfos.idCard = idCard;
+    _myinfos.salary = salary;
+    _myinfos.workType = workType;
+    _myinfos.currentState = currentState;
+    if ((name.length == 0 && name.length > 10) || idCard.length != 18 || (salary.length == 0 && name.length > 15) ) {
+        [self showMessageDialog:@"请检查内容是否合法!"];
+    }else{
+        NSLog(@"name:%@ -- id:%@ -- salary:%@" , name , idCard , salary);
+        [self commitMyInfos:_myinfos];
+    }
+}
+
+-(void)commitMyInfos:(MyInfosBean *)myinfos{
+    if (myinfos != nil) {
+      ASIFormDataRequest *req = [self getPostHttpRequest:[WURL_BASE_URL stringByAppendingString:WURL_COMMIT_USERINFO_HEADERIMAGE]];
+        NSString* pm =[self getPhoneNumber];
+        [req setPostValue:pm forKey:WPOST_PARAMS_TEL];
+        [req setPostValue:myinfos.idCard forKey:WPOST_PARAMS_IDCARD];
+        [req setPostValue:myinfos.salary forKey:WPOST_PARAMS_SALARY];
+        [req setPostValue:myinfos.workType forKey:WPOST_PARAMS_WORK_TYPE];
+        [req setPostValue:myinfos.currentState forKey:WPOST_PARAMS_USER_STATE];
+        [req startAsynchronous];
+    }
+}
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    [super requestFinished:request];
+    NSString* response = [request responseString];
+    NSDictionary *dic = [self getDicByNSString:response];
+    NSString *code = [dic objectForKey:WPOST_REQUEST_CODE];
+    if ([self isEmpty:code]) {
+        [self showMessageDialog:@"注册失败"];
+    }else{
+        //保存用户ID
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:code forKey:WCONFIGKEY_USERID];
+        //保存用户资料
+        [ud setObject:_myinfos.name forKey:WPOST_PARAMS_USERNAME];
+        [ud setObject:_myinfos.idCard forKey:WPOST_PARAMS_IDCARD];
+        [ud setObject:_myinfos.salary forKey:WPOST_PARAMS_SALARY];
+        [ud setObject:_myinfos.workType forKey:WPOST_PARAMS_WORK_TYPE];
+        [ud setObject:_myinfos.currentState forKey:WPOST_PARAMS_USER_STATE];
+        [ud setBool:YES forKey:WKEY_SAVE_USERINFO];
+        //查看保存的信息
+        MyInfosBean *b = [self getUserInfo];
+        NSLog(@"%@",b.description);
+    }
+}
+-(void)requestFailed:(ASIHTTPRequest *)request{
+    [super requestFailed:request];
+}
 -(void)hideKeyboard
 {
     [self.nameTextField resignFirstResponder];
@@ -48,6 +107,11 @@
     self.salaryTextField.delegate = self;
     self.typeWorkTextField.delegate = self;
     self.currentStateTextField.delegate = self;
+    //初始化手机号码
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSString *phone = [def objectForKey:WKEY_PHONE_NUMBER];
+    NSString* ps = @"手机号码:";
+    _phoneNameLable.text = [ps stringByAppendingString:phone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,6 +147,7 @@
     [_userIdLable release];
     [_oralCountLable release];
     [_doneButton release];
+    [_myinfos release];
     [super dealloc];
 }
 @end

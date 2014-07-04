@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"详细";
     // Do any additional setup after loading the view.
 }
 

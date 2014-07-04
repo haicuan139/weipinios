@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"验证";
-    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +61,7 @@
     //获取手机号码
     NSString* number = _phoneNumberTextField.text;
     if (number.length != 11) {
-        [self showMessageDialog:@"提示" message:@"请输入正确的手机号码!"];
+        [self showMessageDialog:@"请输入正确的手机号码!"];
     }else{
         //发送验证码
         ASIFormDataRequest *request = [self getPostHttpRequest:[WURL_BASE_URL stringByAppendingString:WURL_SEND_TEL_MESSAGE]];
@@ -93,8 +93,7 @@
 {
     [super requestFinished:request];
     NSString *responseString = [request responseString];
-    NSData* data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    NSDictionary *dic = [self getDicByNSString:responseString];
     code = [dic objectForKey:@"validateCode"];
     [code retain];
     NSLog(@"code:%@",code);
@@ -103,14 +102,20 @@
 - (IBAction)nextOnClick:(id)sender {
     NSString* tCode = _checkCodeTextField.text;
     if (tCode.length != 4) {
-        [self showMessageDialog:@"提示" message:@"验证码有误"];
+        [self showMessageDialog:@"验证码有误"];
     }else{
         if ([code isEqualToString:tCode]) {
             //验证成功
-
+            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+            [def setBool:YES forKey:WKEY_CHECK_STATE_BOOL];
+                self.navigationController.navigationBarHidden = NO;
             [self.navigationController popViewControllerAnimated:YES];
+            //保存手机号码
+            NSString* phoneNumber =  _phoneNumberTextField.text;
+            [def setObject:phoneNumber forKey:WKEY_PHONE_NUMBER];
+            [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
         }else{
-            [self showMessageDialog:@"提示" message:@"验证码有误"];
+            [self showMessageDialog:@"验证码有误"];
         }
     }
 }
