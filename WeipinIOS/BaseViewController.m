@@ -52,6 +52,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"more_icon" ofType:@"png"];
     UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
+    [rightItem setTintColor:[UIColor whiteColor]];
 //    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
     self.navigationItem.rightBarButtonItem = rightItem;
     tableView = [[UITableView alloc ] init];
@@ -69,8 +70,8 @@
     }
     
     [self.view addSubview:tableView];
-    
-    
+//    [[self.tabBarController.tabBar.items objectAtIndex:0] setTitle:@"傻逼"];
+        
 }
 
 -(NSArray *)initArray

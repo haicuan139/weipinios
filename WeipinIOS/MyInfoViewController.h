@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PBaseViewController.h"
 #import "MyInfosBean.h"
-@interface MyInfoViewController : PBaseViewController <UITextFieldDelegate>
+@interface MyInfoViewController : PBaseViewController <UITextFieldDelegate , UIAlertViewDelegate>
+{
+    BOOL workTypeAlert;
 
+}
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 @property (retain, nonatomic) MyInfosBean* myinfos;
 @property (retain, nonatomic) IBOutlet UITextField *idCardTextField;
@@ -24,6 +27,8 @@
 @property (retain, nonatomic) IBOutlet UIButton *doneButton;
 - (void)commitMyInfos:(MyInfosBean *) myinfos;
 - (IBAction)doneButtonOnClick:(id)sender;
+- (IBAction)workTypeButtonClick:(id)sender;
+- (IBAction)currentStateButtonClick:(id)sender;
 
 
 -(void)hideKeyboard;

@@ -51,6 +51,9 @@
 		2246CFA6195C15EC000202D8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA5195C15EC000202D8 /* BaseViewController.m */; };
 		2246CFA9195C39DF000202D8 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2246CFA8195C39DF000202D8 /* RegViewController.m */; };
 		2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2246CFAA195C3A17000202D8 /* reg.storyboard */; };
+		2268DD82196AAE7E0055B301 /* haoyou_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2268DD81196AAE7E0055B301 /* haoyou_normal.png */; };
+		2268DD85196AB24E0055B301 /* MyUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2268DD84196AB24E0055B301 /* MyUITabBarController.m */; };
+		2268DD89196AB7520055B301 /* tabbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2268DD88196AB7520055B301 /* tabbg.png */; };
 		229F080E19669361002C7EE5 /* MyInfosBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F080D19669361002C7EE5 /* MyInfosBean.m */; };
 		22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AB802C196040FA0048B683 /* myinfos.storyboard */; };
 		22B38EB3195AE6DD00AF0F63 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F691959E15E009742E1 /* EGORefreshTableHeaderView.m */; };
@@ -160,6 +163,10 @@
 		2246CFA7195C39DF000202D8 /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
 		2246CFA8195C39DF000202D8 /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		2246CFAA195C3A17000202D8 /* reg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = reg.storyboard; sourceTree = "<group>"; };
+		2268DD81196AAE7E0055B301 /* haoyou_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = haoyou_normal.png; path = "../../../Downloads/表哥项目/切/haoyou_normal.png"; sourceTree = "<group>"; };
+		2268DD83196AB24E0055B301 /* MyUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUITabBarController.h; sourceTree = "<group>"; };
+		2268DD84196AB24E0055B301 /* MyUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUITabBarController.m; sourceTree = "<group>"; };
+		2268DD88196AB7520055B301 /* tabbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbg.png; path = ../../tabbg.png; sourceTree = "<group>"; };
 		229F080C19669361002C7EE5 /* MyInfosBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfosBean.h; sourceTree = "<group>"; };
 		229F080D19669361002C7EE5 /* MyInfosBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfosBean.m; sourceTree = "<group>"; };
 		22AB802C196040FA0048B683 /* myinfos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = myinfos.storyboard; sourceTree = "<group>"; };
@@ -366,6 +373,8 @@
 				22100F5D1959C7A8009742E1 /* LuYongNavigationController.m */,
 				22100F5E1959C7B4009742E1 /* HaoYouNavigationController.h */,
 				22100F5F1959C7B4009742E1 /* HaoYouNavigationController.m */,
+				2268DD83196AB24E0055B301 /* MyUITabBarController.h */,
+				2268DD84196AB24E0055B301 /* MyUITabBarController.m */,
 			);
 			name = NavigationController;
 			sourceTree = "<group>";
@@ -396,6 +405,8 @@
 		22B38EB6195AEAE000AF0F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2268DD88196AB7520055B301 /* tabbg.png */,
+				2268DD81196AAE7E0055B301 /* haoyou_normal.png */,
 				22B38EB7195AEAF200AF0F63 /* blackArrow.png */,
 				22B38EB8195AEAF200AF0F63 /* blackArrow@2x.png */,
 				22B38EB9195AEAF200AF0F63 /* blueArrow.png */,
@@ -526,11 +537,13 @@
 			files = (
 				221696371962FB0600CE7AB6 /* detail.storyboard in Resources */,
 				22100F361959C577009742E1 /* Images.xcassets in Resources */,
+				2268DD82196AAE7E0055B301 /* haoyou_normal.png in Resources */,
 				221696261962D25200CE7AB6 /* more.storyboard in Resources */,
 				22100F251959C576009742E1 /* InfoPlist.strings in Resources */,
 				22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */,
 				22BA1D70196424640024D192 /* more_icon.png in Resources */,
 				22100F2E1959C577009742E1 /* Main.storyboard in Resources */,
+				2268DD89196AB7520055B301 /* tabbg.png in Resources */,
 				2216962D1962ED1000CE7AB6 /* about.storyboard in Resources */,
 				2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */,
 				2216962F1962EE9700CE7AB6 /* feedback.storyboard in Resources */,
@@ -555,6 +568,7 @@
 				22BA1D9C196430980024D192 /* Reachability.h in Sources */,
 				22BA1D9D196430980024D192 /* ASIAuthenticationDialog.h in Sources */,
 				220F1DC91965557400737197 /* PBaseViewController.m in Sources */,
+				2268DD85196AB24E0055B301 /* MyUITabBarController.m in Sources */,
 				22BA1D9E196430980024D192 /* ASICacheDelegate.h in Sources */,
 				22BA1D9F196430980024D192 /* ASIDataCompressor.h in Sources */,
 				22BA1DA0196430980024D192 /* ASIDataDecompressor.h in Sources */,

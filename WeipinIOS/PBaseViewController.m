@@ -82,6 +82,7 @@
 -(MyInfosBean *)getUserInfo{
     MyInfosBean * infos = [MyInfosBean alloc];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    infos.name    = [ud objectForKey:WPOST_PARAMS_USERNAME];
     infos.userId = [ud objectForKey :WCONFIGKEY_USERID];
     infos.idCard = [ud objectForKey :WPOST_PARAMS_IDCARD];
     infos.salary = [ud objectForKey :WPOST_PARAMS_SALARY];

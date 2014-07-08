@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     self.title = @"关于";
+
     // Do any additional setup after loading the view.
 }
 
