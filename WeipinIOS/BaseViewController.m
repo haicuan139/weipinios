@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "MyTableViewCell.h"
 @interface BaseViewController ()
 
 @end
@@ -132,21 +132,27 @@
 }
 -(UITableViewCell *)initCellView:(NSUInteger)index
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *tabCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(tabCell == nil){
-        tabCell = [[UITableViewCell alloc ] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[CellIdentifier autorelease]];
+    static NSString *CellIdentifier = @"CustomCellIdentifier";
+    MyTableViewCell *cell = (MyTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *marray = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+        cell = [marray objectAtIndex:0];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
-    
-    NSString* str = [array objectAtIndex:index];
-    tabCell.textLabel.text = str;
-    return tabCell;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    index = index + 1;
+    [cell.cellNumberButton setTitle:[NSString stringWithFormat:@"%lu",(unsigned long)index] forState:UIControlStateNormal];
+    return cell;
 }
 -(void)onItemClick:(NSInteger)index
 {
 
 
 
+}
+- (CGFloat)tableView:(UITableView *)atableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
