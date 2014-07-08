@@ -53,8 +53,17 @@
     UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
     [rightItem setTintColor:[UIColor whiteColor]];
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
+    UIImage *logo = [UIImage imageNamed:@"title_logo.png"];
+    UIImageView *tLogoView = [[UIImageView alloc] init];
+    tLogoView.frame = CGRectMake(0, 0, 30, 30);
+    [tLogoView setImage:logo];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc ] initWithCustomView:tLogoView];
+    [leftItem setImage:logo];
     self.navigationItem.rightBarButtonItem = rightItem;
+    self.navigationItem.leftBarButtonItem = leftItem;
+    [leftItem release];
+    [rightItem release];
+    [tLogoView release];
     tableView = [[UITableView alloc ] init];
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     tableView.delegate = self;

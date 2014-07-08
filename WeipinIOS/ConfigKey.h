@@ -10,3 +10,4 @@
 #define WKEY_CHECK_STATE_BOOL @"isCheck"
 #define WKEY_SAVE_USERINFO @"userInfo"
 #define WKEY_PHONE_NUMBER @"phoneNumber"
+#define WKEY_ORAL_COUNT @"oralCount"

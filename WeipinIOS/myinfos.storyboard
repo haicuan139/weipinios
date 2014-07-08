@@ -37,6 +37,10 @@
                                         <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rating_none.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rhg-0z-4As">
+                                        <rect key="frame" x="5" y="64" width="99" height="22"/>
+                                        <color key="backgroundColor" red="0.23895025467431946" green="0.62258777390438247" blue="0.25232218340890317" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -178,6 +182,7 @@
                         <outlet property="nameTextField" destination="U92-vm-rpY" id="16f-7A-P3z"/>
                         <outlet property="oralCountLable" destination="Nxk-Ai-noG" id="cAh-DR-42K"/>
                         <outlet property="phoneNameLable" destination="ZDD-Xb-0nA" id="7cN-qV-NvB"/>
+                        <outlet property="ratingImage" destination="Rhg-0z-4As" id="AqY-tI-xhE"/>
                         <outlet property="salaryTextField" destination="k50-pP-cqL" id="rkk-yE-92C"/>
                         <outlet property="typeWorkTextField" destination="jFJ-fe-LQM" id="YOD-N8-JT1"/>
                         <outlet property="userIdLable" destination="emS-Cn-gKZ" id="z4d-R2-tJI"/>
@@ -188,6 +193,9 @@
             <point key="canvasLocation" x="504" y="250"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rating_none.png" width="99" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

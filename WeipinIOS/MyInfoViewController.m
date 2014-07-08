@@ -125,6 +125,8 @@
         [ud setObject:_myinfos.workType forKey:WPOST_PARAMS_WORK_TYPE];
         [ud setObject:_myinfos.currentState forKey:WPOST_PARAMS_USER_STATE];
         [ud setBool:YES forKey:WKEY_SAVE_USERINFO];
+        //设置面试次数
+        [ud setInteger:5  forKey:WKEY_ORAL_COUNT];
         //回到主界面
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -163,8 +165,13 @@
     _phoneNameLable.text = [ps stringByAppendingString:phone];
     //初始化个人资料
     MyInfosBean *userInfo = [self getUserInfo];
+    NSString *userId = [def objectForKey:WCONFIGKEY_USERID];
+    long oralCount = [def integerForKey:WKEY_ORAL_COUNT];
+    NSString* userIdStr = @"用户ID:";
+    NSString* oralCountStr = @"面试次数:";
+    _userIdLable.text = [userIdStr stringByAppendingString:userId];
+    _oralCountLable.text = [oralCountStr stringByAppendingString:[NSString stringWithFormat:@"%li" , oralCount]];
     if (![self isEmpty:userInfo.name]) {
-        //TODO:个人资料初始化
         self.navigationItem.hidesBackButton = NO;
         _nameTextField.text = userInfo.name;
         _nameTextField.enabled = NO;
@@ -173,6 +180,10 @@
         _salaryTextField.text = userInfo.salary;
         _typeWorkTextField.text = userInfo.workType;
         _currentStateTextField.text = userInfo.currentState;
+        //设置评分图片
+        UIImage *image = [UIImage imageNamed:@"rating_full.png"];
+        [_ratingImage setImage:image];
+
     }else{
         self.navigationItem.hidesBackButton = YES;
     }
@@ -212,6 +223,7 @@
     [_oralCountLable release];
     [_doneButton release];
     [_myinfos release];
+    [_ratingImage release];
     [super dealloc];
 }
 @end

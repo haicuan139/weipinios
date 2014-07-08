@@ -29,6 +29,7 @@
 - (IBAction)doneButtonOnClick:(id)sender;
 - (IBAction)workTypeButtonClick:(id)sender;
 - (IBAction)currentStateButtonClick:(id)sender;
+@property (retain, nonatomic) IBOutlet UIImageView *ratingImage;
 
 
 -(void)hideKeyboard;
