@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
@@ -36,13 +35,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="招聘职位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-W8-2tE">
-                        <rect key="frame" x="36" y="65" width="282" height="21"/>
+                        <rect key="frame" x="36" y="63" width="282" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.29573891930000001" green="0.29573891930000001" blue="0.29573891930000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="北京市朝阳区三里屯" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY3-kA-DpL">
-                        <rect key="frame" x="36" y="89" width="282" height="21"/>
+                        <rect key="frame" x="36" y="85" width="282" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.29573891932270913" green="0.29573891932270913" blue="0.29573891932270913" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,6 +52,13 @@
                         <color key="textColor" red="0.2788844621513944" green="0.2788844621513944" blue="0.2788844621513944" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-80-I9S">
+                        <rect key="frame" x="26" y="115" width="504" height="1"/>
+                        <color key="backgroundColor" red="0.60036416832669315" green="0.60036416832669315" blue="0.60036416832669315" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -63,7 +69,7 @@
                 <outlet property="cellSalaryLable" destination="8aZ-3K-nKU" id="Wfe-Jx-zWg"/>
                 <outlet property="cellTime" destination="jeY-rW-abx" id="XK2-BK-B5B"/>
             </connections>
-            <point key="canvasLocation" x="378" y="314"/>
+            <point key="canvasLocation" x="378" y="312"/>
         </tableViewCell>
     </objects>
 </document>

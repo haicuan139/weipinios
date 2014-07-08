@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EGORefreshTableHeaderView.h"
-#import "URLHeader.h"
-#import "ConfigKey.h"
-@interface BaseViewController : UIViewController <UITableViewDataSource , UITableViewDelegate , EGORefreshTableHeaderDelegate>
+#import "GodBaseViewController.h"
+@interface BaseViewController : GodBaseViewController <UITableViewDataSource , UITableViewDelegate , EGORefreshTableHeaderDelegate>
 {
         UITableView *tableView;
         BOOL _reloading;
@@ -29,5 +27,6 @@
 //-(void) setKids: (NSString *)myOldestKidName secondKid: (NSString *) mySecondOldestKidName thirdKid: (NSString *) myThirdOldestKidName;
 -(void)pushViewControllerWithController:(UIViewController *)controller;
 -(void)onRightBarItemClick;
-
+-(void)reloadData;
+-(void)refreshDoInBackground;
 @end

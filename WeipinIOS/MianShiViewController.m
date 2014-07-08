@@ -27,11 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-        self.title = @"面试";
+        self.title =    WSTRING_ORAL;
+    NSLog(@"面试加载");
 }
 -(NSArray *)initArray
 {
-    return  [NSArray arrayWithObjects:@"面试1",@"面试2",@"面试3",@"面试4",@"面试5",@"面试6", nil];
+    return  [[NSArray alloc] init];
 }
 -(void)onItemClick:(NSInteger)index
 {

@@ -27,15 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"好友";
+    self.title = WSTRING_HAOYOU;
 
     
 }
--(NSArray *)initArray
-{
-    return [NSArray arrayWithObjects:@"好友1",@"好友2",@"好友3",@"好友4", nil];
-}
-
-
 
 @end

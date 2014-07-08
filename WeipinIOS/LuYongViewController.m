@@ -27,12 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-        self.title = @"录用";
+        self.title = WSTRING_LUYONG;
 }
 
 -(NSArray *)initArray
 {
-    return  [NSArray arrayWithObjects:@"录用1",@"录用2",@"录用3",@"录用4",@"录用5", nil];
+    return  [[NSArray alloc] init];
 }
 
 @end

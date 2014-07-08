@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OralsInfoBean.h"
 @interface MJAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (retain , nonatomic) OralsInfoBean *oralInfos;
 
 @end

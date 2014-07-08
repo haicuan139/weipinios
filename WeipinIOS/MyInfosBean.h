@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MyInfosBean : NSObject
-//NSString* name = self.nameTextField.text;
-//NSString* idCard = self.idCardTextField.text;
-//NSString* salary = self.salaryTextField.text;
-//NSString* workType = self.typeWorkTextField.text;
-//NSString* currentState = self.currentStateTextField.text;
 @property (retain, nonatomic) NSString* name;
 @property (retain, nonatomic) NSString* idCard;
 @property (retain, nonatomic) NSString* salary;

@@ -22,21 +22,19 @@
     }
     return self;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"职位";
-
-
-    
+    self.title = WSTRING_ZHIWEI;
 }
 -(NSArray *)initArray
 {
-    return [NSArray arrayWithObjects:@"职位1",@"职位2",@"职位3",@"职位4", nil];
+    return [[NSArray alloc] init];
 }
 -(void)onItemClick:(NSInteger)index
 {
+//     MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
 
 }

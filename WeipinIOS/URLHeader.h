@@ -66,6 +66,23 @@
 #define WPOST_REQUEST_CODE @"code"
 #define WCONFIGKEY_USERID @"userId"
 
+//面试信息字段
+//id
+#define WKEY_ORALINFO_ID @"oralId"
+//面试状态
+#define WKEY_ORALINFO_REST @"oralRst"
+//面试时间
+#define WKEY_ORALINFO_TIME @"createTime"
+//公司名称
+#define WKEY_ORALINFO_COMPANYNAME @"companyName"
+//公司地址
+#define WKEY_ORALINFO_COMPANADDRESS @"companyAddress"
+//职位
+#define WKEY_ORALINFO_GANGWEI @"hireTitle"
+//薪酬
+#define WKEY_ORALINFO_SALARY @"salay"
+
+
 
 
 

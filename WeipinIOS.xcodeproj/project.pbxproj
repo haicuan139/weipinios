@@ -87,6 +87,8 @@
 		22BA1DAC196430D90024D192 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA1DAB196430D90024D192 /* SystemConfiguration.framework */; };
 		22BA1DAE196430E10024D192 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA1DAD196430E10024D192 /* MobileCoreServices.framework */; };
 		22BA1DB0196431060024D192 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA1DAF196431060024D192 /* libz.1.1.3.dylib */; };
+		22BE782B196BF8E300A21555 /* OralsInfoBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE782A196BF8E300A21555 /* OralsInfoBean.m */; };
+		22BE7830196BFD8D00A21555 /* GodBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE782F196BFD8D00A21555 /* GodBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +214,11 @@
 		22BA1DAB196430D90024D192 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		22BA1DAD196430E10024D192 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		22BA1DAF196431060024D192 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		22BE7829196BF8E300A21555 /* OralsInfoBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OralsInfoBean.h; sourceTree = "<group>"; };
+		22BE782A196BF8E300A21555 /* OralsInfoBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OralsInfoBean.m; sourceTree = "<group>"; };
+		22BE782E196BFD8D00A21555 /* GodBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GodBaseViewController.h; sourceTree = "<group>"; };
+		22BE782F196BFD8D00A21555 /* GodBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GodBaseViewController.m; sourceTree = "<group>"; };
+		22BE7831196C3F7300A21555 /* StringHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +286,8 @@
 		22100F201959C576009742E1 /* WeipinIOS */ = {
 			isa = PBXGroup;
 			children = (
+				22BE782D196BF92500A21555 /* ContentValue */,
+				22BE782C196BF90600A21555 /* Bean */,
 				2272C2EE196BD35000F0B9B8 /* Custom */,
 				2246CFAE195D5229000202D8 /* storyboard */,
 				22B38EB6195AEAE000AF0F63 /* Resources */,
@@ -289,7 +298,6 @@
 				22100F291959C577009742E1 /* MJAppDelegate.h */,
 				22100F2A1959C577009742E1 /* MJAppDelegate.m */,
 				22100F351959C577009742E1 /* Images.xcassets */,
-				22BA1D6F196424640024D192 /* more_icon.png */,
 				22100F211959C576009742E1 /* Supporting Files */,
 			);
 			path = WeipinIOS;
@@ -340,7 +348,6 @@
 				221696311962F0F300CE7AB6 /* AboutViewController.m */,
 				2246CFA4195C15EC000202D8 /* BaseViewController.h */,
 				2246CFA5195C15EC000202D8 /* BaseViewController.m */,
-				22BA1D7219642E0E0024D192 /* ConfigKey.h */,
 				221696331962F0FE00CE7AB6 /* FeedBackViewController.h */,
 				221696341962F0FE00CE7AB6 /* FeedBackViewController.m */,
 				22100F6A1959E3F6009742E1 /* HaoYouViewController.h */,
@@ -359,11 +366,10 @@
 				220F1DC81965557400737197 /* PBaseViewController.m */,
 				2246CFA7195C39DF000202D8 /* RegViewController.h */,
 				2246CFA8195C39DF000202D8 /* RegViewController.m */,
-				22BA1D7119642C320024D192 /* URLHeader.h */,
 				22100F701959E3F6009742E1 /* ZhiWeiViewController.h */,
 				22100F711959E3F6009742E1 /* ZhiWeiViewController.m */,
-				229F080C19669361002C7EE5 /* MyInfosBean.h */,
-				229F080D19669361002C7EE5 /* MyInfosBean.m */,
+				22BE782E196BFD8D00A21555 /* GodBaseViewController.h */,
+				22BE782F196BFD8D00A21555 /* GodBaseViewController.m */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 		22B38EB6195AEAE000AF0F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22BA1D6F196424640024D192 /* more_icon.png */,
 				2272C2EA196BCC3A00F0B9B8 /* title_logo.png */,
 				2268DD81196AAE7E0055B301 /* haoyou_normal.png */,
 				22B38EB7195AEAF200AF0F63 /* blackArrow.png */,
@@ -471,6 +478,27 @@
 				22100F691959E15E009742E1 /* EGORefreshTableHeaderView.m */,
 			);
 			name = PullRef;
+			sourceTree = "<group>";
+		};
+		22BE782C196BF90600A21555 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				229F080C19669361002C7EE5 /* MyInfosBean.h */,
+				229F080D19669361002C7EE5 /* MyInfosBean.m */,
+				22BE7829196BF8E300A21555 /* OralsInfoBean.h */,
+				22BE782A196BF8E300A21555 /* OralsInfoBean.m */,
+			);
+			name = Bean;
+			sourceTree = "<group>";
+		};
+		22BE782D196BF92500A21555 /* ContentValue */ = {
+			isa = PBXGroup;
+			children = (
+				22BA1D7119642C320024D192 /* URLHeader.h */,
+				22BA1D7219642E0E0024D192 /* ConfigKey.h */,
+				22BE7831196C3F7300A21555 /* StringHeader.h */,
+			);
+			name = ContentValue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +623,7 @@
 				22BA1DA3196430980024D192 /* ASIHTTPRequest.h in Sources */,
 				22BA1DA4196430980024D192 /* ASIHTTPRequestConfig.h in Sources */,
 				22BA1DA5196430980024D192 /* ASIHTTPRequestDelegate.h in Sources */,
+				22BE782B196BF8E300A21555 /* OralsInfoBean.m in Sources */,
 				22BA1DA6196430980024D192 /* ASIInputStream.h in Sources */,
 				22BA1DA7196430980024D192 /* ASINetworkQueue.h in Sources */,
 				229F080E19669361002C7EE5 /* MyInfosBean.m in Sources */,
@@ -632,6 +661,7 @@
 				22BA1D9419642FEC0024D192 /* ASINetworkQueue.m in Sources */,
 				2240B36A195D8456009DD78C /* MyInfoViewController.m in Sources */,
 				22BA1D9019642FEC0024D192 /* ASIDownloadCache.m in Sources */,
+				22BE7830196BFD8D00A21555 /* GodBaseViewController.m in Sources */,
 				22BA1D8F19642FEC0024D192 /* ASIDataDecompressor.m in Sources */,
 				22BA1D9319642FEC0024D192 /* ASIInputStream.m in Sources */,
 				22BA1D9219642FEC0024D192 /* ASIHTTPRequest.m in Sources */,

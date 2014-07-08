@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface HaoYouViewController : BaseViewController
+#import "PBaseViewController.h"
+@interface HaoYouViewController : PBaseViewController
 {
     
 }

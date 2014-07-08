@@ -30,5 +30,22 @@
 
     // Configure the view for the selected state
 }
-
+    
+-(void)dealloc{
+    
+    [_cellNumberButton release];
+    
+    [_cellCompanyName release];
+    
+    [_cellSalaryLable release];
+    
+    [_cellJobLable release];
+    
+    [_cellAddressLable release];
+    
+    [_cellTime release];
+    
+    [super dealloc];
+    
+}
 @end

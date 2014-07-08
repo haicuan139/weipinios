@@ -21,6 +21,7 @@
         // Custom initialization
 
     }
+
     return self;
 }
 
@@ -65,6 +66,7 @@
     [rightItem release];
     [tLogoView release];
     tableView = [[UITableView alloc ] init];
+    tableView.separatorStyle = NO;
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -73,9 +75,8 @@
         view.delegate = self;
         refreshTableHeaderView = view;
         [tableView addSubview:view];
-
-
         [view release];
+        [self sendRequest];
     }
     
     [self.view addSubview:tableView];
@@ -83,6 +84,9 @@
         
 }
 
+- (void)reloadData{
+    [tableView reloadData];
+}
 -(NSArray *)initArray
 {
   return   [NSArray arrayWithObjects:@"cell", nil];
@@ -100,7 +104,7 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"scrollViewDidScroll");
+
     [refreshTableHeaderView egoRefreshScrollViewDidScroll:scrollView];
 }
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
@@ -111,7 +115,9 @@
 {
     NSLog(@"egoRefreshTableHeaderDidTriggerRefresh");
     [self reloadTableViewDataSource];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
+//    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:10.0];
+    //耗时操作
+    [self refreshDoInBackground];
 }
 -(NSDate *)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view
 {
@@ -140,8 +146,21 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    OralsInfoBean* b = [array objectAtIndex:index];
+    if (b != nil) {
+        NSString* addrStr = @"地址:";
+        cell.cellAddressLable.text = [addrStr stringByAppendingString:b.cellAddress];
+        [cell.cellCompanyName setTitle:b.cellNCompanyName forState:UIControlStateNormal];
+        NSString* jobStr = @"职位:";
+        cell.cellJobLable.text = [jobStr stringByAppendingString:b.cellJob];
+        cell.cellTime.text = b.cellTime;
+        NSString* salaryStr = @"薪酬:";
+        cell.cellSalaryLable.text = [salaryStr stringByAppendingString:b.cellSalary];
+    }
     index = index + 1;
     [cell.cellNumberButton setTitle:[NSString stringWithFormat:@"%lu",(unsigned long)index] forState:UIControlStateNormal];
+
     return cell;
 }
 -(void)onItemClick:(NSInteger)index
@@ -173,14 +192,17 @@
 -(void)dealloc
 {
     [super dealloc];
-    tableView = nil;
-    array = nil;
+    [array release];
+    [tableView release];
+//    [refreshTableHeaderView release];
+//    [url release];
 }
 
 -(void)pushViewControllerWithStorboardName:(NSString *)storyboardName sid:(NSString *)id
 {
     UIStoryboard* st = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
     UIViewController *controller = [st instantiateViewControllerWithIdentifier:id];
+    [controller retain];
     [self pushViewControllerWithController:controller];
     
 }
@@ -191,7 +213,39 @@
 -(void)onRightBarItemClick
 {
     [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
-//            [self pushViewControllerWithStorboardName:@"reg" sid:@"regController"];
+}
+- (void)requestFinished:(ASIHTTPRequest *)request{
+    [super requestFinished:request];
+    NSString *res = [request responseString];
+    NSArray *arr = [self toArrayOrNSDictionary:res];
+    NSMutableArray *oralArray = [[NSMutableArray alloc] init];
+    if (arr == nil) {
+        NSLog(@"解析失败");
+    }else{
+        for (int i=0; i < arr.count; i++) {
+            NSDictionary* dic = [arr objectAtIndex:i];
+            OralsInfoBean *b = [self dicToOralInfo:dic];
+            NSString *t = self.title;
+            if ([t isEqualToString:WSTRING_ZHIWEI]) {
+                [oralArray addObject:b];
+            }else if([t isEqualToString:WSTRING_ORAL] && [b.cellOralRst isEqualToString:@"1"]){
+                [oralArray addObject:b];
+            }else if([t isEqualToString:WSTRING_LUYONG] && [b.cellOralRst isEqualToString:@"2"]){
+                [oralArray addObject:b];
+            }
+        }
+        array = oralArray;
+    }
+    [self reloadData];
+    [self doneLoadingTableViewData];
+}
+- (void)requestFailed:(ASIHTTPRequest *)request{
+    [super requestFailed:request];
+    [self doneLoadingTableViewData];
+}
+- (void)refreshDoInBackground{
+    [self sendRequest];
+
 }
 
 @end
