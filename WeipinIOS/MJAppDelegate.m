@@ -7,12 +7,25 @@
 //
 
 #import "MJAppDelegate.h"
-
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
 @implementation MJAppDelegate
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return  [UMSocialSnsService handleOpenURL:url];
+    
+}
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [UMSocialData setAppKey:@"53bcfc2056240bf0470623e7"];
+    [UMSocialWechatHandler setWXAppId:@"wxd9a39c7122aa6516" url:@"http://www.umeng.com/social"];
     [NSThread sleepForTimeInterval:2.0];
     return YES;
 }

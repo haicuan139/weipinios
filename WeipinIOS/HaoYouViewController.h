@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "PBaseViewController.h"
-@interface HaoYouViewController : PBaseViewController
+#import "UMSocial.h"
+#import "WXApi.h"
+@interface HaoYouViewController : PBaseViewController <WXApiDelegate , UMSocialUIDelegate>
 {
     
 }
+-(void)onClick;
 @end

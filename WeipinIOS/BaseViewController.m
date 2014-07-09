@@ -61,8 +61,8 @@
     [tLogoView setImage:logo];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc ] initWithCustomView:tLogoView];
     [leftItem setImage:logo];
-    self.navigationItem.rightBarButtonItem = rightItem;
     self.navigationItem.leftBarButtonItem = leftItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
     [leftItem release];
     [rightItem release];
     [tLogoView release];
