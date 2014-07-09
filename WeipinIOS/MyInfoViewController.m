@@ -165,13 +165,13 @@
     _phoneNameLable.text = [ps stringByAppendingString:phone];
     //初始化个人资料
     MyInfosBean *userInfo = [self getUserInfo];
-    NSString *userId = [def objectForKey:WCONFIGKEY_USERID];
-    long oralCount = [def integerForKey:WKEY_ORAL_COUNT];
-    NSString* userIdStr = @"用户ID:";
-    NSString* oralCountStr = @"面试次数:";
-    _userIdLable.text = [userIdStr stringByAppendingString:userId];
-    _oralCountLable.text = [oralCountStr stringByAppendingString:[NSString stringWithFormat:@"%li" , oralCount]];
     if (![self isEmpty:userInfo.name]) {
+        NSString *userId = [def objectForKey:WCONFIGKEY_USERID];
+        long oralCount = [def integerForKey:WKEY_ORAL_COUNT];
+        NSString* userIdStr = @"用户ID:";
+        NSString* oralCountStr = @"面试次数:";
+        _userIdLable.text = [userIdStr stringByAppendingString:userId];
+        _oralCountLable.text = [oralCountStr stringByAppendingString:[NSString stringWithFormat:@"%li" , oralCount]];
         self.navigationItem.hidesBackButton = NO;
         _nameTextField.text = userInfo.name;
         _nameTextField.enabled = NO;

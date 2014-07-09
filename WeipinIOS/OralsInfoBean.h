@@ -24,4 +24,7 @@
 
 @property (retain, nonatomic)  NSString *cellOralRst;
 
+@property (retain, nonatomic)  NSString *cellOralTel;
+@property (retain, nonatomic)  NSString *cellOralTime;
+
 @end

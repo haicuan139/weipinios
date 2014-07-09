@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "MyTableViewCell.h"
+#import "MJAppDelegate.h"
 @interface BaseViewController ()
 
 @end
@@ -163,11 +164,15 @@
 
     return cell;
 }
+-(void)viewDidAppear:(BOOL)animated{
+    [self sendRequest];
+}
 -(void)onItemClick:(NSInteger)index
 {
-
-
-
+    MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    OralsInfoBean *oralInfo = [array objectAtIndex:index];
+    appDelegate.oralInfos = oralInfo;
+    [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
 }
 - (CGFloat)tableView:(UITableView *)atableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -226,7 +231,7 @@
             NSDictionary* dic = [arr objectAtIndex:i];
             OralsInfoBean *b = [self dicToOralInfo:dic];
             NSString *t = self.title;
-            if ([t isEqualToString:WSTRING_ZHIWEI]) {
+            if ([t isEqualToString:WSTRING_ZHIWEI] && [b.cellOralRst isEqualToString:@"0"]) {
                 [oralArray addObject:b];
             }else if([t isEqualToString:WSTRING_ORAL] && [b.cellOralRst isEqualToString:@"1"]){
                 [oralArray addObject:b];

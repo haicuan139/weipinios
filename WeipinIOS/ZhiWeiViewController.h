@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "MJAppDelegate.h"
 @interface ZhiWeiViewController : BaseViewController
 {
 }

@@ -68,8 +68,8 @@
         [request setPostValue:number forKey:@"telephoNum"];
         [request startAsynchronous];
         timerCount = 30;
-        [timer retain];
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerSelector) userInfo:nil repeats:YES];
+        [timer retain];
         [timer fire];
     }
 }

@@ -113,8 +113,12 @@
     [req startAsynchronous];
 }
 -(void)sendRequest{
-    NSString *url = [WURL_BASE_URL stringByAppendingString:WURL_ORAL_LIST];
-    [self sendRequest:url];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString* uid = [ud objectForKey:WCONFIGKEY_USERID];
+    if (![self isEmpty:uid]) {
+        NSString *url = [WURL_BASE_URL stringByAppendingString:WURL_ORAL_LIST];
+        [self sendRequest:url];
+    }
 }
 -(OralsInfoBean *)dicToOralInfo:(NSDictionary *)dic{
     OralsInfoBean *oi = [[OralsInfoBean alloc] init];
@@ -125,6 +129,16 @@
     oi.cellOralRst = [dic objectForKey:WKEY_ORALINFO_REST];
     oi.cellTime = [dic objectForKey:WKEY_ORALINFO_TIME];
     oi.cellSalary = [dic objectForKey:WKEY_ORALINFO_SALARY];
+    oi.cellOralTel = [dic objectForKey:WKEY_ORALINFO_TEL];
+    oi.cellOralTime = [dic objectForKey:WKEY_ORALINFO_ORALTIME];
     return oi;
 }
+-(void)sendTouDiRequest:(NSString *)oralId{
+    NSString *url = [WURL_BASE_URL stringByAppendingString:WURL_OREL_TOUDI];
+    ASIFormDataRequest *req = [self getPostHttpRequest:url];
+    [req setPostValue:@"1" forKey:WKEY_ORALINFO_REST];
+    [req setPostValue:oralId forKey:WKEY_ORALINFO_ID];
+    [req startAsynchronous];
+}
+
 @end

@@ -32,9 +32,9 @@
                 <navigationController definesPresentationContext="YES" id="vJC-ED-iro" customClass="MianShiNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="面试" image="mianshi" id="Uih-Pu-Yb2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="doP-ys-PSW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="doP-ys-PSW">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.091889184969999996" green="0.1183174261" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.033605178749999999" green="0.063989114609999995" blue="0.069798929280000005" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -73,9 +73,9 @@
                 <navigationController definesPresentationContext="YES" id="YvT-lO-D2q" customClass="HaoYouNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="好友" image="haoyou" id="v4n-j7-lD7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ydq-0U-jPI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="ydq-0U-jPI">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.091889184969999996" green="0.1183174261" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.033605178749999999" green="0.063989114609999995" blue="0.069798929280000005" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -114,9 +114,9 @@
                 <navigationController definesPresentationContext="YES" id="Igk-Zc-OU8" customClass="ZhiweiNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="职位" image="zhiwei" id="71N-D9-LZi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Qod-KW-u97">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Qod-KW-u97">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.091889184973457758" green="0.11831742613991136" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.03360517874502416" green="0.063989114608759945" blue="0.069798929282868571" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -158,9 +158,9 @@
                 <navigationController definesPresentationContext="YES" id="QD2-R9-bsg" customClass="LuYongNavigationController" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="录用" image="luyong" id="Js3-qO-ndO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Xb1-EH-Q9s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Xb1-EH-Q9s">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.091889184969999996" green="0.1183174261" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.033605178749999999" green="0.063989114609999995" blue="0.069798929280000005" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>

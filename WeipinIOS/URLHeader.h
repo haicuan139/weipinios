@@ -71,7 +71,7 @@
 #define WKEY_ORALINFO_ID @"oralId"
 //面试状态
 #define WKEY_ORALINFO_REST @"oralRst"
-//面试时间
+//创建时间
 #define WKEY_ORALINFO_TIME @"createTime"
 //公司名称
 #define WKEY_ORALINFO_COMPANYNAME @"companyName"
@@ -81,7 +81,11 @@
 #define WKEY_ORALINFO_GANGWEI @"hireTitle"
 //薪酬
 #define WKEY_ORALINFO_SALARY @"salay"
+//电话
+#define WKEY_ORALINFO_TEL @"comTel"
 
+//面试时间
+#define WKEY_ORALINFO_ORALTIME @"oralTime"
 
 
 

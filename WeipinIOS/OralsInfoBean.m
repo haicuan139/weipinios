@@ -18,6 +18,7 @@
         _cellOralRst        = @"面试反馈";
         _cellSalary         = @"薪酬";
         _cellTime           = @"时间";
+        _cellOralTel        = @"131";
     }
     return self;
 }

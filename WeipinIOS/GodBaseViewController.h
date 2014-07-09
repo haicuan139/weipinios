@@ -30,6 +30,7 @@
 -(BOOL)isEmpty:(NSString *)string;
 -(void)sendRequest:(NSString *)url;
 -(void)sendRequest;
+-(void)sendTouDiRequest:(NSString *)oralId;
 -(id)toArrayOrNSDictionary:(NSString *)json;
 -(OralsInfoBean *)dicToOralInfo:(NSDictionary *)dic;
 

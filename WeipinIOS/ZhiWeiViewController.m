@@ -32,10 +32,4 @@
 {
     return [[NSArray alloc] init];
 }
--(void)onItemClick:(NSInteger)index
-{
-//     MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [self pushViewControllerWithStorboardName:@"detail" sid:@"detail"];
-
-}
 @end

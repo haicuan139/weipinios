@@ -26,7 +26,18 @@
 {
     [super viewDidLoad];
     self.title = @"详细";
-    // Do any additional setup after loading the view.
+    MJAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    oralInfo = appDelegate.oralInfos;
+    if (![oralInfo.cellOralRst isEqualToString:@"0"]) {
+        _toudiButton.hidden = YES;
+    }else{
+        _toudiButton.hidden = NO;
+    }
+    _companyNameText.text = oralInfo.cellNCompanyName;
+    _gangweiText.text = oralInfo.cellJob;
+    _oralTimeText.text = oralInfo.cellOralTime;
+    _oralAddrText.text = oralInfo.cellAddress;
+    _oralTelText.text = oralInfo.cellOralTel;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,11 +59,38 @@
 
 - (void)dealloc {
     [_toudiButton release];
+    [_companyNameText release];
+    [_oralTimeText release];
+    [_oralAddrText release];
+    [_oralTelText release];
+    [_oralTimeText release];
+    [_oralAddrText release];
+    [oralInfo release];
     [super dealloc];
 }
 - (IBAction)toudiButtonClick:(id)sender {
-
-
+    [self sendTouDiRequest:oralInfo.cellOralId];
+    
 }
-
+-(void)requestFailed:(ASIHTTPRequest *)request{
+    [super requestFailed:request];
+}
+-(void)requestFinished:(ASIHTTPRequest *)request{
+    [super requestFinished:request];
+    NSString* content = [request responseString];
+    NSDictionary* dic = [self getDicByNSString:content];
+    NSString *code = [dic objectForKey:@"code"];
+    if (![self isEmpty:code] && [code isEqualToString:@"1"]) {
+        //申请成功
+        [self showMessageDialog:@"申请成功"];
+        //面试次数-1
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        long oralCount = [ud integerForKey:WKEY_ORAL_COUNT];
+        oralCount = oralCount - 1;
+        [ud setInteger:oralCount forKey:WKEY_ORAL_COUNT];
+    }else{
+        //申请失败
+        [self showMessageDialog:@"申请失败"];
+    }
+}
 @end
