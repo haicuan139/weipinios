@@ -23,18 +23,12 @@
     }
     return self;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    UIImage *logo = [UIImage imageNamed:@"title_logo.png"];
-    UIImageView *tLogoView = [[UIImageView alloc] init];
-    tLogoView.frame = CGRectMake(0, 0, 30, 30);
-    [tLogoView setImage:logo];
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc ] initWithCustomView:tLogoView];
-    [leftItem setImage:logo];
-    self.navigationItem.leftBarButtonItem = leftItem;
     self.title = WSTRING_HAOYOU;
+    self.view.backgroundColor = [UIColor whiteColor];
     UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [shareButton setTitle:@"点击分享给好友" forState:UIControlStateNormal];
     shareButton.frame = CGRectMake(0, 0, 320, 40);
@@ -45,15 +39,18 @@
 
     
 }
+
 -(void)didSelectSocialPlatform:(NSString *)platformName withSocialData:(UMSocialData *)socialData{
     NSLog(@"点击了分享平台");
 }
 
 -(void)onClick{
+
+    NSString *text = @"我通过微聘获得了一家公司的录用通知,大家快来使用微聘吧真的很好用!";
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"53bcfc2056240bf0470623e7"
-                                      shareText:@"你要分享的文字"
-                                     shareImage:nil
+                                      shareText:text//文字
+                                     shareImage:nil //图片
                                 shareToSnsNames:nil
                                        delegate:self];
 }
@@ -64,6 +61,10 @@
     {
         //得到分享到的微博平台名
         //分享成功.面试次数++
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        long oralCount = [ud integerForKey:WKEY_ORAL_COUNT];
+        oralCount = oralCount + 1;
+        [ud setInteger:oralCount forKey:WKEY_ORAL_COUNT];
     }
 }
 @end

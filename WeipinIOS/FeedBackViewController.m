@@ -59,10 +59,24 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (void)requestFinished:(ASIHTTPRequest *)request{
+    [super requestFinished:request];
+    [self showMessageDialog:@"提交完成,谢谢您的建议"];
+}
+- (void)requestFailed:(ASIHTTPRequest *)request{
+    [super requestFailed:request];
+}
 - (void)dealloc {
     [_commitButton release];
     [_feedbackTextView release];
     [super dealloc];
+}
+- (IBAction)onClick:(id)sender {
+    NSString *feedBackText = _feedbackTextView.text;
+    if (![self isEmpty:feedBackText]) {
+        [self sendFeedBackRequest:feedBackText];
+    }else {
+        [self showMessageDialog:@"请输入内容!"];
+    }
 }
 @end

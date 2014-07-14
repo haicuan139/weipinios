@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220063531973D1D000CA7114 /* CustomCellOral.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220063521973D1D000CA7114 /* CustomCellOral.xib */; };
 		220F1DC91965557400737197 /* PBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220F1DC81965557400737197 /* PBaseViewController.m */; };
 		22100F1B1959C576009742E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1A1959C576009742E1 /* Foundation.framework */; };
 		22100F1D1959C576009742E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22100F1C1959C576009742E1 /* CoreGraphics.framework */; };
@@ -58,6 +59,12 @@
 		2272C2F1196BD37400F0B9B8 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2272C2F0196BD37400F0B9B8 /* MyTableViewCell.m */; };
 		2278D8F1196D180800F7AFCD /* rating_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 2278D8F0196D180800F7AFCD /* rating_none.png */; };
 		2278D8F3196D19E900F7AFCD /* rating_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 2278D8F2196D19E900F7AFCD /* rating_full.png */; };
+		227DD8FF1973EE2300BBB323 /* BaseTabTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD8FE1973EE2300BBB323 /* BaseTabTableViewCell.m */; };
+		227DD9021973EE4B00BBB323 /* MianshiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD9011973EE4B00BBB323 /* MianshiTableViewCell.m */; };
+		227DD9051973FDB300BBB323 /* TextOralDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD9041973FDB300BBB323 /* TextOralDetailViewController.m */; };
+		227DD9091973FF0E00BBB323 /* textdetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227DD9081973FF0E00BBB323 /* textdetail.storyboard */; };
+		227DD90B1974082200BBB323 /* roundbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 227DD90A1974082200BBB323 /* roundbg.jpg */; };
+		227DD90E19740C1400BBB323 /* ContentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD90D19740C1400BBB323 /* ContentTextView.m */; };
 		229F080E19669361002C7EE5 /* MyInfosBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 229F080D19669361002C7EE5 /* MyInfosBean.m */; };
 		22AB802D196040FA0048B683 /* myinfos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AB802C196040FA0048B683 /* myinfos.storyboard */; };
 		22B38EB3195AE6DD00AF0F63 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22100F691959E15E009742E1 /* EGORefreshTableHeaderView.m */; };
@@ -130,6 +137,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220063521973D1D000CA7114 /* CustomCellOral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellOral.xib; sourceTree = "<group>"; };
 		220F1DC71965557400737197 /* PBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBaseViewController.h; sourceTree = "<group>"; };
 		220F1DC81965557400737197 /* PBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBaseViewController.m; sourceTree = "<group>"; };
 		22100F171959C576009742E1 /* WeipinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeipinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +205,16 @@
 		2272C2F0196BD37400F0B9B8 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		2278D8F0196D180800F7AFCD /* rating_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rating_none.png; sourceTree = "<group>"; };
 		2278D8F2196D19E900F7AFCD /* rating_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rating_full.png; sourceTree = "<group>"; };
+		227DD8FD1973EE2300BBB323 /* BaseTabTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabTableViewCell.h; sourceTree = "<group>"; };
+		227DD8FE1973EE2300BBB323 /* BaseTabTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabTableViewCell.m; sourceTree = "<group>"; };
+		227DD9001973EE4B00BBB323 /* MianshiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MianshiTableViewCell.h; sourceTree = "<group>"; };
+		227DD9011973EE4B00BBB323 /* MianshiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MianshiTableViewCell.m; sourceTree = "<group>"; };
+		227DD9031973FDB300BBB323 /* TextOralDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextOralDetailViewController.h; sourceTree = "<group>"; };
+		227DD9041973FDB300BBB323 /* TextOralDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextOralDetailViewController.m; sourceTree = "<group>"; };
+		227DD9081973FF0E00BBB323 /* textdetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = textdetail.storyboard; sourceTree = "<group>"; };
+		227DD90A1974082200BBB323 /* roundbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roundbg.jpg; sourceTree = "<group>"; };
+		227DD90C19740C1400BBB323 /* ContentTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTextView.h; sourceTree = "<group>"; };
+		227DD90D19740C1400BBB323 /* ContentTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTextView.m; sourceTree = "<group>"; };
 		229F080C19669361002C7EE5 /* MyInfosBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfosBean.h; sourceTree = "<group>"; };
 		229F080D19669361002C7EE5 /* MyInfosBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfosBean.m; sourceTree = "<group>"; };
 		22AB802C196040FA0048B683 /* myinfos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = myinfos.storyboard; sourceTree = "<group>"; };
@@ -443,6 +461,8 @@
 				22100F711959E3F6009742E1 /* ZhiWeiViewController.m */,
 				22BE782E196BFD8D00A21555 /* GodBaseViewController.h */,
 				22BE782F196BFD8D00A21555 /* GodBaseViewController.m */,
+				227DD9031973FDB300BBB323 /* TextOralDetailViewController.h */,
+				227DD9041973FDB300BBB323 /* TextOralDetailViewController.m */,
 			);
 			name = UIViewController;
 			sourceTree = "<group>";
@@ -476,6 +496,8 @@
 		2246CFAE195D5229000202D8 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				227DD9081973FF0E00BBB323 /* textdetail.storyboard */,
+				220063521973D1D000CA7114 /* CustomCellOral.xib */,
 				22100F2C1959C577009742E1 /* Main.storyboard */,
 				2246CFAA195C3A17000202D8 /* reg.storyboard */,
 				22AB802C196040FA0048B683 /* myinfos.storyboard */,
@@ -493,6 +515,12 @@
 			children = (
 				2272C2EF196BD37400F0B9B8 /* MyTableViewCell.h */,
 				2272C2F0196BD37400F0B9B8 /* MyTableViewCell.m */,
+				227DD8FD1973EE2300BBB323 /* BaseTabTableViewCell.h */,
+				227DD8FE1973EE2300BBB323 /* BaseTabTableViewCell.m */,
+				227DD9001973EE4B00BBB323 /* MianshiTableViewCell.h */,
+				227DD9011973EE4B00BBB323 /* MianshiTableViewCell.m */,
+				227DD90C19740C1400BBB323 /* ContentTextView.h */,
+				227DD90D19740C1400BBB323 /* ContentTextView.m */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -500,6 +528,7 @@
 		22B38EB6195AEAE000AF0F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				227DD90A1974082200BBB323 /* roundbg.jpg */,
 				2278D8F2196D19E900F7AFCD /* rating_full.png */,
 				2278D8F0196D180800F7AFCD /* rating_none.png */,
 				22BA1D6F196424640024D192 /* more_icon.png */,
@@ -722,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227DD9091973FF0E00BBB323 /* textdetail.storyboard in Resources */,
 				2272C2ED196BD2C200F0B9B8 /* CustomCell.xib in Resources */,
 				22F9A18F196D61A800A04237 /* UMSCommentDetailController.xib in Resources */,
 				2278D8F3196D19E900F7AFCD /* rating_full.png in Resources */,
@@ -746,7 +776,9 @@
 				2246CFAB195C3A17000202D8 /* reg.storyboard in Resources */,
 				2216962F1962EE9700CE7AB6 /* feedback.storyboard in Resources */,
 				22F9A191196D61A800A04237 /* UMSCommentInputControlleriPad.xib in Resources */,
+				220063531973D1D000CA7114 /* CustomCellOral.xib in Resources */,
 				22F9A193196D61A800A04237 /* UMShareEditViewControlleriPad.xib in Resources */,
+				227DD90B1974082200BBB323 /* roundbg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +825,10 @@
 				22100F781959E4B1009742E1 /* LuYongNavigationController.h in Sources */,
 				22BA1D8D19642FEC0024D192 /* ASIAuthenticationDialog.m in Sources */,
 				221696351962F0FE00CE7AB6 /* FeedBackViewController.m in Sources */,
+				227DD8FF1973EE2300BBB323 /* BaseTabTableViewCell.m in Sources */,
 				22BA1D9B196430500024D192 /* Reachability.m in Sources */,
+				227DD9051973FDB300BBB323 /* TextOralDetailViewController.m in Sources */,
+				227DD90E19740C1400BBB323 /* ContentTextView.m in Sources */,
 				221696291962D4B100CE7AB6 /* MoreViewController.m in Sources */,
 				22100F791959E4B1009742E1 /* LuYongNavigationController.m in Sources */,
 				22100F7A1959E4B1009742E1 /* HaoYouNavigationController.h in Sources */,
@@ -817,6 +852,7 @@
 				2240B36A195D8456009DD78C /* MyInfoViewController.m in Sources */,
 				22BA1D9019642FEC0024D192 /* ASIDownloadCache.m in Sources */,
 				22BE7830196BFD8D00A21555 /* GodBaseViewController.m in Sources */,
+				227DD9021973EE4B00BBB323 /* MianshiTableViewCell.m in Sources */,
 				22BA1D8F19642FEC0024D192 /* ASIDataDecompressor.m in Sources */,
 				22BA1D9319642FEC0024D192 /* ASIInputStream.m in Sources */,
 				22BA1D9219642FEC0024D192 /* ASIHTTPRequest.m in Sources */,

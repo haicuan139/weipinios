@@ -17,8 +17,10 @@
 #import "ConfigKey.h"
 #import "OralsInfoBean.h"
 #import "StringHeader.h"
+#import "MyTableViewCell.h"
+#import "MianshiTableViewCell.h"
+#import "MJAppDelegate.h"
 @interface GodBaseViewController : UIViewController <ASIHTTPRequestDelegate>
-
 -(void)showMessageDialog:(NSString* )msg;
 -(ASIHTTPRequest *) getNormalHttpRequest :(NSString *) url;
 -(ASIFormDataRequest *) getPostHttpRequest : (NSString *)url;
@@ -33,5 +35,10 @@
 -(void)sendTouDiRequest:(NSString *)oralId;
 -(id)toArrayOrNSDictionary:(NSString *)json;
 -(OralsInfoBean *)dicToOralInfo:(NSDictionary *)dic;
-
+-(NSString *)getUserId;
+-(void)sendFeedBackRequest:(NSString *)content;
+-(UIBarButtonItem *)getLeftItem;
+-(UIBarButtonItem *)getRightItem;
+-(void)onRightBarItemClick;
+-(void)onLeftBarItemClick;
 @end

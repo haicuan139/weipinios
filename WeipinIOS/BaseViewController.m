@@ -37,6 +37,9 @@
     // Do any additional setup after loading the view.
     array = [self initArray];
     [array retain];
+    UIBarButtonItem* left = [self getLeftItem];
+    self.navigationItem.leftBarButtonItem = left;
+    [left release];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     BOOL noIsFirst = [ud boolForKey:WKEY_FIRST_RUN_KEY];
     BOOL isCheck = [ud boolForKey:WKEY_CHECK_STATE_BOOL];
@@ -50,22 +53,6 @@
         [self pushViewControllerWithStorboardName:@"myinfos" sid:@"myinfos"];
     }
     //初始化TabView
-//
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"more_icon" ofType:@"png"];
-    UIImage* more = [[UIImage alloc ] initWithContentsOfFile:path];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:more style:UIBarButtonItemStylePlain target:self action:@selector(onRightBarItemClick)];
-    [rightItem setTintColor:[UIColor whiteColor]];
-    UIImage *logo = [UIImage imageNamed:@"title_logo.png"];
-    UIImageView *tLogoView = [[UIImageView alloc] init];
-    tLogoView.frame = CGRectMake(0, 0, 30, 30);
-    [tLogoView setImage:logo];
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc ] initWithCustomView:tLogoView];
-    [leftItem setImage:logo];
-    self.navigationItem.leftBarButtonItem = leftItem;
-    self.navigationItem.rightBarButtonItem = rightItem;
-    [leftItem release];
-    [rightItem release];
-    [tLogoView release];
     tableView = [[UITableView alloc ] init];
     tableView.separatorStyle = NO;
     tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -157,7 +144,8 @@
         cell.cellJobLable.text = [jobStr stringByAppendingString:b.cellJob];
         cell.cellTime.text = b.cellTime;
         NSString* salaryStr = @"薪酬:";
-        cell.cellSalaryLable.text = [salaryStr stringByAppendingString:b.cellSalary];
+        cell.cellSalaryLable.text = [[salaryStr stringByAppendingString:b.cellSalary]stringByAppendingString:@"/月(税前)"];
+        cell.cellWorkTypeLable.text = b.cellOralWorkType;
     }
     index = index + 1;
     [cell.cellNumberButton setTitle:[NSString stringWithFormat:@"%lu",(unsigned long)index] forState:UIControlStateNormal];
@@ -203,22 +191,8 @@
 //    [url release];
 }
 
--(void)pushViewControllerWithStorboardName:(NSString *)storyboardName sid:(NSString *)id
-{
-    UIStoryboard* st = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-    UIViewController *controller = [st instantiateViewControllerWithIdentifier:id];
-    [controller retain];
-    [self pushViewControllerWithController:controller];
-    
-}
--(void)pushViewControllerWithController:(UIViewController *)controller
-{
-    [self.navigationController pushViewController:controller animated:YES];
-}
--(void)onRightBarItemClick
-{
-    [self pushViewControllerWithStorboardName:@"more" sid:@"more"];
-}
+
+
 - (void)requestFinished:(ASIHTTPRequest *)request{
     [super requestFinished:request];
     NSString *res = [request responseString];

@@ -14,9 +14,9 @@
 
 @property (retain, nonatomic)  NSString *cellSalary;
 
-@property (retain, nonatomic)  NSString *cellJob;
+@property (retain, nonatomic)  NSString *cellJob;//职位
 
-@property (retain, nonatomic)  NSString *cellAddress;
+@property (retain, nonatomic)  NSString *cellAddress;//公司地址
 
 @property (retain, nonatomic)  NSString *cellTime;
 
@@ -24,7 +24,18 @@
 
 @property (retain, nonatomic)  NSString *cellOralRst;
 
-@property (retain, nonatomic)  NSString *cellOralTel;
-@property (retain, nonatomic)  NSString *cellOralTime;
+@property (retain, nonatomic)  NSString *cellOralTel; //联系电话
+
+@property (retain, nonatomic)  NSString *cellOralTime;//面试时间
+
+@property (retain, nonatomic)  NSString *cellOralWorkType;
+
+@property (retain, nonatomic)  NSString *cellOralAddress;//面试地址
+
+@property (retain, nonatomic)  NSString *cellOralContacts;//联系人
+
+@property (retain, nonatomic)  NSString *cellCreateTime;//创建时间
+
+@property (retain, nonatomic)  NSString *cellOralState;//面试状态
 
 @end

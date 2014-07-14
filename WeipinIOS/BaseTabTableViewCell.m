@@ -1,14 +1,14 @@
 //
-//  MyTabCellTableViewCell.m
+//  BaseTabTableViewCell.m
 //  WeipinIOS
 //
-//  Created by haicuan139 on 14-7-8.
+//  Created by haicuan139 on 14-7-14.
 //  Copyright (c) 2014年 haicuan139. All rights reserved.
 //
 
-#import "MyTableViewCell.h"
+#import "BaseTabTableViewCell.h"
 
-@implementation MyTableViewCell
+@implementation BaseTabTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -30,24 +30,5 @@
 
     // Configure the view for the selected state
 }
-    
--(void)dealloc{
-    
-    [_cellNumberButton release];
-    
-    [_cellCompanyName release];
-    
-    [_cellSalaryLable release];
-    
-    [_cellJobLable release];
-    
-    [_cellAddressLable release];
-    
-    [_cellTime release];
-    
-    [_cellWorkTypeLable release];
-    
-    [super dealloc];
-    
-}
+
 @end

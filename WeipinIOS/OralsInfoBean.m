@@ -19,6 +19,9 @@
         _cellSalary         = @"薪酬";
         _cellTime           = @"时间";
         _cellOralTel        = @"131";
+        _cellOralTel        = @"13222222222";
+        _cellOralTel        = @"2014/2/1 10:10:10";
+        _cellCreateTime     = @"2014/2/1 10:10:30";
     }
     return self;
 }

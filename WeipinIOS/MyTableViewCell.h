@@ -10,16 +10,17 @@
 
 @interface MyTableViewCell : UITableViewCell
 
-@property (retain, nonatomic) IBOutlet UIButton *cellNumberButton;
+@property (retain, nonatomic) IBOutlet UIButton *cellNumberButton;//条目编号
 
-@property (retain, nonatomic) IBOutlet UIButton *cellCompanyName;
+@property (retain, nonatomic) IBOutlet UIButton *cellCompanyName;//公司名称
 
-@property (retain, nonatomic) IBOutlet UILabel *cellSalaryLable;
+@property (retain, nonatomic) IBOutlet UILabel *cellSalaryLable;//薪酬
 
-@property (retain, nonatomic) IBOutlet UILabel *cellJobLable;
+@property (retain, nonatomic) IBOutlet UILabel *cellJobLable;//工作类型
 
-@property (retain, nonatomic) IBOutlet UILabel *cellAddressLable;
+@property (retain, nonatomic) IBOutlet UILabel *cellAddressLable;//公司地址
 
-@property (retain, nonatomic) IBOutlet UILabel *cellTime;
+@property (retain, nonatomic) IBOutlet UILabel *cellTime;//创建时间
 
+@property (retain, nonatomic) IBOutlet UILabel *cellWorkTypeLable;//工作类型
 @end

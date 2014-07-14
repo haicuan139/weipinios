@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FeedBackViewController : UIViewController <UITextViewDelegate>
+#import "PBaseViewController.h"
+@interface FeedBackViewController : PBaseViewController <UITextViewDelegate>
 @property (retain, nonatomic) IBOutlet UIButton *commitButton;
 @property (retain, nonatomic) IBOutlet UITextView *feedbackTextView;
+- (IBAction)onClick:(id)sender;
 
 @end

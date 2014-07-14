@@ -40,7 +40,7 @@
 /**
  * 建议反馈
  */
-#define WURL_URL_SUGGEST @"feedback/save.ac"
+#define WURL_URL_FEEDBACK @"feedback/save.ac"
 
 /**
  * 评分

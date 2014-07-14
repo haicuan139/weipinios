@@ -1,14 +1,14 @@
 //
-//  MyTabCellTableViewCell.m
+//  MianshiTableViewCell.m
 //  WeipinIOS
 //
-//  Created by haicuan139 on 14-7-8.
+//  Created by haicuan139 on 14-7-14.
 //  Copyright (c) 2014年 haicuan139. All rights reserved.
 //
 
-#import "MyTableViewCell.h"
+#import "MianshiTableViewCell.h"
 
-@implementation MyTableViewCell
+@implementation MianshiTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -30,24 +30,24 @@
 
     // Configure the view for the selected state
 }
-    
--(void)dealloc{
-    
-    [_cellNumberButton release];
-    
-    [_cellCompanyName release];
-    
-    [_cellSalaryLable release];
-    
-    [_cellJobLable release];
-    
-    [_cellAddressLable release];
-    
-    [_cellTime release];
-    
-    [_cellWorkTypeLable release];
-    
+
+- (void)dealloc{
     [super dealloc];
+    [_cellOralNumberButton release];//条目编号
     
+    [_cellOralCompanyName release];//公司名称
+    
+    [_cellOralNumberLable release];//面试编号
+    
+    [_cellOralAddressLable release];//面试地址
+    
+    [_cellOralTime release];//创建时间
+    
+    [_cellOralState release];//面试状态
+    
+    [_cellOralTel release];//联系电话
+    
+    [_cellOralContacts release];//联系人
 }
+
 @end
